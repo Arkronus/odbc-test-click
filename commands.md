@@ -1,20 +1,19 @@
 # Инструкция
 
-1. Установите драйвер для нужной операционной системы:
+Загрузить репозиторий на сервер
 
-**Windows** <https://github.com/yandex/clickhouse-odbc/releases>
-
-2. Установить сертификат
+1. Установить сертификат и библиотеку unixodbc
 
 ```bash
 bash getcert.sh
 ```
 
-1. Установите драйвер clickhouse-odbc и укажите его настройки в файле odbc.ini:
+2. Установите драйвер clickhouse-odbc и укажите его настройки в файле odbc.ini
+
+Разместить файл в путь `/etc/odbc.ini`
+
+3. Тестирование подключения
 
 ```
-Driver = /opt/tableau/tableau_driver/clik/libclickhouseodbcw.so
-Description = ClickHouse driver
-URL = <https://user1>:<password>@rc1a-mj1otp3ml6o6jva6.mdb.yandexcloud.net:8443/query
-Database = db1
+isql название-подключения логин пароль
 ```
