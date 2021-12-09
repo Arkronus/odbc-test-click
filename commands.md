@@ -11,6 +11,7 @@ bash getcert.sh
 2. Установите драйвер clickhouse-odbc и укажите его настройки в файле odbc.ini
 
 Разместить файл в путь `/etc/odbc.ini`
+Разместить драйвер `libclickhouseodbcw.so` в путь указанный в файле odbc.ini
 
 3. Тестирование подключения
 
